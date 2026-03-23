@@ -13,12 +13,15 @@
 
         body {
             font-family: 'Georgia', 'Times New Roman', serif;
-            background: #faf8f5;
-            color: #3d3630;
+            background: #1a1a1a;
+            color: #f0ebe5;
             line-height: 1.8;
+            overflow-x: hidden;
         }
 
+        /* ── Hero ── */
         .hero {
+            position: relative;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -26,7 +29,75 @@
             justify-content: center;
             padding: 2.5rem 1.5rem;
             text-align: center;
-            background: linear-gradient(180deg, #faf8f5 0%, #f3ede6 100%);
+            background: radial-gradient(ellipse at 50% 40%, #2a2220 0%, #1a1a1a 70%);
+        }
+
+        /* ── Spinning wheel ── */
+        .wheel-wrap {
+            position: relative;
+            width: 220px;
+            height: 220px;
+            margin-bottom: 2.5rem;
+        }
+
+        .wheel {
+            animation: spin 4s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* ── Pulse rings behind wheel ── */
+        .pulse-ring {
+            position: absolute;
+            top: 50%; left: 50%;
+            width: 220px; height: 220px;
+            border: 1px solid rgba(176, 137, 104, 0.15);
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(1);
+            animation: pulse 3s ease-out infinite;
+        }
+        .pulse-ring:nth-child(2) { animation-delay: 1s; }
+        .pulse-ring:nth-child(3) { animation-delay: 2s; }
+
+        @keyframes pulse {
+            0%   { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+            100% { transform: translate(-50%, -50%) scale(1.8); opacity: 0; }
+        }
+
+        /* ── Beat bars ── */
+        .beat-bars {
+            display: flex;
+            gap: 5px;
+            justify-content: center;
+            align-items: end;
+            height: 32px;
+            margin-bottom: 1.5rem;
+        }
+
+        .beat-bar {
+            width: 4px;
+            border-radius: 2px;
+            background: #b08968;
+            animation: beat 1.2s ease-in-out infinite;
+        }
+        .beat-bar:nth-child(1)  { height: 8px;  animation-delay: 0s; }
+        .beat-bar:nth-child(2)  { height: 16px; animation-delay: 0.1s; }
+        .beat-bar:nth-child(3)  { height: 24px; animation-delay: 0.2s; }
+        .beat-bar:nth-child(4)  { height: 32px; animation-delay: 0.3s; }
+        .beat-bar:nth-child(5)  { height: 20px; animation-delay: 0.4s; }
+        .beat-bar:nth-child(6)  { height: 28px; animation-delay: 0.15s; }
+        .beat-bar:nth-child(7)  { height: 12px; animation-delay: 0.35s; }
+        .beat-bar:nth-child(8)  { height: 22px; animation-delay: 0.05s; }
+        .beat-bar:nth-child(9)  { height: 18px; animation-delay: 0.25s; }
+        .beat-bar:nth-child(10) { height: 10px; animation-delay: 0.45s; }
+        .beat-bar:nth-child(11) { height: 26px; animation-delay: 0.2s; }
+        .beat-bar:nth-child(12) { height: 14px; animation-delay: 0.1s; }
+
+        @keyframes beat {
+            0%, 100% { transform: scaleY(0.4); opacity: 0.4; }
+            50%      { transform: scaleY(1);   opacity: 1; }
         }
 
         .tagline {
@@ -39,24 +110,24 @@
         }
 
         h1 {
-            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            font-size: clamp(2.5rem, 6vw, 4rem);
             font-weight: 400;
-            letter-spacing: 1px;
-            color: #3d3630;
+            letter-spacing: 2px;
+            color: #f0ebe5;
             margin-bottom: 0.5rem;
         }
 
         .subtitle {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             font-size: 0.95rem;
-            color: #9a8c7e;
+            color: #8a7e72;
             margin-bottom: 2.5rem;
         }
 
         .divider {
             width: 40px;
             height: 1px;
-            background: #c9b99a;
+            background: linear-gradient(90deg, transparent, #b08968, transparent);
             margin: 0 auto 2.5rem;
         }
 
@@ -67,7 +138,7 @@
 
         .bio p {
             font-size: 1.05rem;
-            color: #5c524a;
+            color: #b0a89e;
             margin-bottom: 1.5rem;
         }
 
@@ -76,6 +147,33 @@
             font-style: italic;
             color: #b08968;
             margin-top: 1rem;
+        }
+
+        /* ── Stat counters ── */
+        .stats {
+            display: flex;
+            gap: 3rem;
+            justify-content: center;
+            margin: 2.5rem 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-num {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #b08968;
+            line-height: 1.2;
+        }
+
+        .stat-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #6b6058;
         }
 
         .certs {
@@ -89,12 +187,12 @@
 
         .cert {
             background: rgba(176, 137, 104, 0.1);
-            border: 1px solid rgba(176, 137, 104, 0.25);
+            border: 1px solid rgba(176, 137, 104, 0.2);
             padding: 0.35rem 0.9rem;
             border-radius: 999px;
             font-size: 0.75rem;
             letter-spacing: 0.5px;
-            color: #9a7b5b;
+            color: #b08968;
         }
 
         .contact {
@@ -106,41 +204,127 @@
             display: inline-block;
             padding: 0.7rem 2rem;
             background: #b08968;
-            color: #fff;
+            color: #1a1a1a;
             text-decoration: none;
             border-radius: 999px;
-            font-weight: 500;
+            font-weight: 600;
             font-size: 0.9rem;
             letter-spacing: 0.5px;
-            transition: background 0.2s;
+            transition: background 0.2s, transform 0.2s;
         }
 
         .contact a:hover {
-            background: #9a7b5b;
+            background: #c9a07a;
+            transform: translateY(-2px);
         }
 
-        .photos {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 2.5rem;
+        /* ── Ambient particles ── */
+        .particles {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
         }
 
-        .photos img {
-            width: 260px;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        .particle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: rgba(176, 137, 104, 0.3);
+            border-radius: 50%;
+            animation: float linear infinite;
+        }
+
+        @keyframes float {
+            0%   { transform: translateY(100vh) scale(0); opacity: 0; }
+            10%  { opacity: 1; }
+            90%  { opacity: 1; }
+            100% { transform: translateY(-10vh) scale(1); opacity: 0; }
         }
     </style>
 </head>
 <body>
     <section class="hero">
+        <div class="particles">
+            <div class="particle" style="left:10%; animation-duration:8s; animation-delay:0s;"></div>
+            <div class="particle" style="left:20%; animation-duration:12s; animation-delay:2s;"></div>
+            <div class="particle" style="left:35%; animation-duration:9s; animation-delay:4s;"></div>
+            <div class="particle" style="left:50%; animation-duration:11s; animation-delay:1s;"></div>
+            <div class="particle" style="left:65%; animation-duration:7s; animation-delay:3s;"></div>
+            <div class="particle" style="left:75%; animation-duration:10s; animation-delay:5s;"></div>
+            <div class="particle" style="left:88%; animation-duration:13s; animation-delay:0.5s;"></div>
+            <div class="particle" style="left:5%;  animation-duration:9s; animation-delay:6s;"></div>
+            <div class="particle" style="left:45%; animation-duration:14s; animation-delay:2.5s;"></div>
+            <div class="particle" style="left:92%; animation-duration:8s; animation-delay:4.5s;"></div>
+        </div>
+
+        <!-- Spinning bike wheel SVG -->
+        <div class="wheel-wrap">
+            <div class="pulse-ring"></div>
+            <div class="pulse-ring"></div>
+            <div class="pulse-ring"></div>
+            <svg class="wheel" viewBox="0 0 220 220" width="220" height="220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Outer rim -->
+                <circle cx="110" cy="110" r="100" stroke="#b08968" stroke-width="2.5" opacity="0.6"/>
+                <circle cx="110" cy="110" r="92" stroke="#b08968" stroke-width="0.5" opacity="0.3"/>
+                <!-- Hub -->
+                <circle cx="110" cy="110" r="14" stroke="#b08968" stroke-width="2" opacity="0.8"/>
+                <circle cx="110" cy="110" r="5" fill="#b08968" opacity="0.6"/>
+                <!-- Spokes -->
+                <line x1="110" y1="24" x2="110" y2="96" stroke="#b08968" stroke-width="1" opacity="0.4"/>
+                <line x1="110" y1="124" x2="110" y2="196" stroke="#b08968" stroke-width="1" opacity="0.4"/>
+                <line x1="24" y1="110" x2="96" y2="110" stroke="#b08968" stroke-width="1" opacity="0.4"/>
+                <line x1="124" y1="110" x2="196" y2="110" stroke="#b08968" stroke-width="1" opacity="0.4"/>
+                <!-- Diagonal spokes -->
+                <line x1="49" y1="49" x2="99" y2="99" stroke="#b08968" stroke-width="0.8" opacity="0.3"/>
+                <line x1="121" y1="121" x2="171" y2="171" stroke="#b08968" stroke-width="0.8" opacity="0.3"/>
+                <line x1="171" y1="49" x2="121" y2="99" stroke="#b08968" stroke-width="0.8" opacity="0.3"/>
+                <line x1="99" y1="121" x2="49" y2="171" stroke="#b08968" stroke-width="0.8" opacity="0.3"/>
+                <!-- Extra spokes for realism -->
+                <line x1="75" y1="28" x2="102" y2="97" stroke="#b08968" stroke-width="0.6" opacity="0.25"/>
+                <line x1="118" y1="123" x2="145" y2="192" stroke="#b08968" stroke-width="0.6" opacity="0.25"/>
+                <line x1="28" y1="75" x2="97" y2="102" stroke="#b08968" stroke-width="0.6" opacity="0.25"/>
+                <line x1="123" y1="118" x2="192" y2="145" stroke="#b08968" stroke-width="0.6" opacity="0.25"/>
+                <line x1="145" y1="28" x2="118" y2="97" stroke="#b08968" stroke-width="0.6" opacity="0.25"/>
+                <line x1="102" y1="123" x2="75" y2="192" stroke="#b08968" stroke-width="0.6" opacity="0.25"/>
+                <line x1="192" y1="75" x2="123" y2="102" stroke="#b08968" stroke-width="0.6" opacity="0.25"/>
+                <line x1="97" y1="118" x2="28" y2="145" stroke="#b08968" stroke-width="0.6" opacity="0.25"/>
+                <!-- Tire texture -->
+                <circle cx="110" cy="110" r="105" stroke="#b08968" stroke-width="4" stroke-dasharray="3 8" opacity="0.15"/>
+            </svg>
+        </div>
+
+        <!-- Music beat visualizer -->
+        <div class="beat-bars">
+            <div class="beat-bar"></div>
+            <div class="beat-bar"></div>
+            <div class="beat-bar"></div>
+            <div class="beat-bar"></div>
+            <div class="beat-bar"></div>
+            <div class="beat-bar"></div>
+            <div class="beat-bar"></div>
+            <div class="beat-bar"></div>
+            <div class="beat-bar"></div>
+            <div class="beat-bar"></div>
+            <div class="beat-bar"></div>
+            <div class="beat-bar"></div>
+        </div>
+
         <div class="tagline">Cycle Instructor &bull; Personal Trainer &bull; Group Exercise Coordinator</div>
         <h1>Jenny Albin</h1>
         <p class="subtitle">The Westboro Club &middot; Westborough, MA</p>
+
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-num">15+</div>
+                <div class="stat-label">Years Teaching</div>
+            </div>
+            <div class="stat">
+                <div class="stat-num">2009</div>
+                <div class="stat-label">On the Bike Since</div>
+            </div>
+        </div>
+
         <div class="divider"></div>
         <div class="bio">
             <p>Jenny's love of spinning started young — hopping on a bike alongside her mom as a teenager, just for fun. But the music, the energy, and the feeling of a room full of people pushing together stuck with her in a way nothing else did.</p>
