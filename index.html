@@ -12,10 +12,10 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #0a0a0a;
-            color: #f5f5f5;
-            line-height: 1.7;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: #faf8f5;
+            color: #3d3630;
+            line-height: 1.8;
         }
 
         .hero {
@@ -24,123 +24,113 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 2rem;
+            padding: 2.5rem 1.5rem;
             text-align: center;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a0a1a 50%, #0a0a0a 100%);
+            background: linear-gradient(180deg, #faf8f5 0%, #f3ede6 100%);
         }
 
         .tagline {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             text-transform: uppercase;
-            letter-spacing: 4px;
-            font-size: 0.85rem;
-            color: #d946ef;
-            margin-bottom: 1rem;
+            letter-spacing: 3px;
+            font-size: 0.75rem;
+            color: #b08968;
+            margin-bottom: 0.75rem;
         }
 
         h1 {
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
-            font-weight: 800;
-            letter-spacing: -1px;
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            font-weight: 400;
+            letter-spacing: 1px;
+            color: #3d3630;
             margin-bottom: 0.5rem;
         }
 
-        h1 span {
-            background: linear-gradient(90deg, #d946ef, #f97316);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
         .subtitle {
-            font-size: 1.1rem;
-            color: #999;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 0.95rem;
+            color: #9a8c7e;
             margin-bottom: 2.5rem;
-            letter-spacing: 1px;
         }
 
         .divider {
-            width: 60px;
-            height: 3px;
-            background: linear-gradient(90deg, #d946ef, #f97316);
+            width: 40px;
+            height: 1px;
+            background: #c9b99a;
             margin: 0 auto 2.5rem;
-            border-radius: 2px;
         }
 
         .bio {
-            max-width: 680px;
+            max-width: 620px;
             margin: 0 auto;
         }
 
         .bio p {
             font-size: 1.05rem;
-            color: #ccc;
+            color: #5c524a;
             margin-bottom: 1.5rem;
         }
 
-        .bio p:first-child::first-line {
-            color: #f5f5f5;
-            font-weight: 600;
-        }
-
         .closer {
-            font-size: 1.25rem;
-            font-weight: 700;
+            font-size: 1.15rem;
             font-style: italic;
-            color: #d946ef;
-            margin-top: 2rem;
+            color: #b08968;
+            margin-top: 1rem;
         }
 
         .certs {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.75rem;
+            gap: 0.6rem;
             justify-content: center;
             margin-top: 2.5rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
 
         .cert {
-            background: rgba(217, 70, 239, 0.1);
-            border: 1px solid rgba(217, 70, 239, 0.3);
-            padding: 0.4rem 1rem;
+            background: rgba(176, 137, 104, 0.1);
+            border: 1px solid rgba(176, 137, 104, 0.25);
+            padding: 0.35rem 0.9rem;
             border-radius: 999px;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             letter-spacing: 0.5px;
-            color: #d946ef;
+            color: #9a7b5b;
         }
 
         .contact {
-            margin-top: 3rem;
+            margin-top: 2.5rem;
         }
 
         .contact a {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             display: inline-block;
-            padding: 0.75rem 2rem;
-            background: linear-gradient(90deg, #d946ef, #f97316);
+            padding: 0.7rem 2rem;
+            background: #b08968;
             color: #fff;
             text-decoration: none;
             border-radius: 999px;
-            font-weight: 600;
-            font-size: 0.95rem;
+            font-weight: 500;
+            font-size: 0.9rem;
             letter-spacing: 0.5px;
-            transition: opacity 0.2s;
+            transition: background 0.2s;
         }
 
         .contact a:hover {
-            opacity: 0.85;
+            background: #9a7b5b;
         }
     </style>
 </head>
 <body>
     <section class="hero">
         <div class="tagline">Cycle Instructor &bull; Personal Trainer &bull; Group Exercise Coordinator</div>
-        <h1><span>Jenny Albin</span></h1>
+        <h1>Jenny Albin</h1>
         <p class="subtitle">The Westboro Club &middot; Westborough, MA</p>
         <div class="divider"></div>
         <div class="bio">
-            <p>Jenny Albin doesn't just teach spin — she lives it. What started as a teenage ride-along with her mom turned into a full-blown obsession with the bike. The pounding music, the gut-check intervals, the electric energy of a packed room pushing through together — she was hooked from the first pedal stroke.</p>
-            <p>Over 15 years later, Jenny has built a reputation as one of the most intense and motivating cycle instructors in the Westborough area. She started teaching spin in Boston in 2009, earned her cycle certification in 2010, and hasn't looked back. Her classes are known for high energy, killer playlists, and the kind of push that makes you wonder why you signed up — and then immediately book the next one.</p>
-            <p>Now serving as Group Exercise Coordinator and Personal Trainer at The Westboro Club, Jenny is the driving force behind the Ultimate Group Exercise (UGX) program.</p>
-            <p class="closer">The bike is where it all started — and it's still where she brings the fire.</p>
+            <p>Jenny's love of spinning started young — hopping on a bike alongside her mom as a teenager, just for fun. But the music, the energy, and the feeling of a room full of people pushing together stuck with her in a way nothing else did.</p>
+            <p>With a background in early childhood education, teaching was already in her DNA. In 2009, she brought those two passions together and started leading spin classes in Boston. She's been on the bike ever since — now with over 15 years of experience and a reputation for classes that are as fun as they are challenging.</p>
+            <p>Today, Jenny serves as Group Exercise Coordinator and Personal Trainer at The Westboro Club, where she helped build the Ultimate Group Exercise (UGX) program. Whether it's on the bike, in the weight room, or out on a run, she believes fitness should feel good — for the body and the mind.</p>
+            <p class="closer">Come ride with her. You'll be glad you did.</p>
         </div>
         <div class="certs">
             <span class="cert">Certified Cycle Instructor</span>
@@ -150,7 +140,7 @@
             <span class="cert">Running</span>
         </div>
         <div class="contact">
-            <a href="mailto:jenny@thewestboroclub.com">Get In Touch</a>
+            <a href="mailto:jenny@thewestboroclub.com">Say Hello</a>
         </div>
     </section>
 </body>
