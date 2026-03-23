@@ -1,9 +1,11 @@
 # Jenny Albin
 
-**Group Exercise Coordinator | Personal Trainer | Cycle Instructor**
+**Group Exercise Coordinator | Personal Trainer | Cycle Obsessed**
 
-Jenny Albin is a passionate fitness professional with over 15 years of experience in the group exercise and fitness industry. What started as spinning with her mom for fun as a teenager turned into a lifelong calling — the music, the intervals, and the energy in the room hooked her like nothing else.
+Jenny Albin doesn't just teach spin — she lives it. What started as a teenage ride-along with her mom turned into a full-blown obsession with the bike. The pounding music, the gut-check intervals, the electric energy of a packed room pushing through together — she was hooked from the first pedal stroke.
 
-With a background in early childhood education, Jenny naturally blended her love of teaching with her love of fitness. She began teaching spin in Boston in 2009 and has been a certified cycle instructor since 2010. Today, she serves as Group Exercise Coordinator and Personal Trainer at The Westboro Club, where she has been instrumental in building the Ultimate Group Exercise (UGX) program.
+Over 15 years later, Jenny has built a reputation as one of the most intense and motivating cycle instructors in the Westborough area. She started teaching spin in Boston in 2009, earned her cycle certification in 2010, and hasn't looked back. Her classes are known for high energy, killer playlists, and the kind of push that makes you wonder why you signed up — and then immediately book the next one.
 
-Jenny holds certifications in Personal Training and Fascial Stretch Therapy (Level 1), with specialties in strength training, spinning, and running. She believes that exercise can help not only the body but the mind — and brings that philosophy to every class and client interaction.
+Now serving as Group Exercise Coordinator and Personal Trainer at The Westboro Club, Jenny is the driving force behind the Ultimate Group Exercise (UGX) program. She also holds certifications in Personal Training and Fascial Stretch Therapy (Level 1), with deep expertise in strength training and running.
+
+But the bike is where it all started — and it's still where she brings the fire.
