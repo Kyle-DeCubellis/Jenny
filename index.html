@@ -66,6 +66,18 @@
             100% { transform: translate(-50%, -50%) scale(1.8); opacity: 0; }
         }
 
+        /* ── Profile photo ── */
+        .profile-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center 20%;
+            border: 2px solid rgba(176, 137, 104, 0.4);
+            box-shadow: 0 0 40px rgba(176, 137, 104, 0.15);
+            margin-bottom: 2rem;
+        }
+
         /* ── Beat bars ── */
         .beat-bars {
             display: flex;
@@ -293,6 +305,8 @@
                 <circle cx="110" cy="110" r="105" stroke="#b08968" stroke-width="4" stroke-dasharray="3 8" opacity="0.15"/>
             </svg>
         </div>
+
+        <img class="profile-photo" src="Jenny_Albin.png" alt="Jenny Albin">
 
         <!-- Music beat visualizer -->
         <div class="beat-bars">
